@@ -69,6 +69,12 @@ const Today = new Date();
 //****SETTING A PROTOTYPE */
 //There are various ways to setting prototype in JS. We are using two Methods
 //i. Object.create() ii. constructor
+
+//Using Object.create() Method
+//The Object.create() method creates a new object and allows you to specify an object that will be used as the new object's prototype.
+//Example
+
+
 const myObject = {
     city: 'Islamabad',
     greeting: function(){
