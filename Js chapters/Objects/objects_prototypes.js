@@ -6,14 +6,14 @@
 //#The chain ends when we reach a prototype that has null for its own prototype.
 
 //***Making an object literal */
-const Person = {
+const Person0 = {
     city: 'Karachi (City Of Light)',
     greeting: function(){
         console.log(`Hello I am From ${this.city}`);
     }
 }
 
-//console.log(Person);
+//console.log(Person0);
 
 //console will pop up a list of all the properties available to this object.
 //`city` and `greeting` are our defied properties.
@@ -40,7 +40,7 @@ console.log(Object.getPrototypeOf(myArray));
 console.log(myArray.keys('asad'))
 
 //console.log(Person.hasOwnProperty('greeting')) //Check if `Person` has `greeting` Property & return true or False
-console.log(Object.getPrototypeOf(Person.city)); //Getting the Prototype properties of `city` property in Person Object
+console.log(Object.getPrototypeOf(Person0.city)); //Getting the Prototype properties of `city` property in Person Object
 //console.log(Object.getPrototypeOf(Person.greeting)); //Getting the Prototype properties of `greeting` property in Person Object
 
 //console.log(Person.city.search('City'));
@@ -67,10 +67,16 @@ const Today = new Date();
 
 
 //****Learning `isPrototypeOf` */
-const Person2 = {};
+const Person20 = {};
 
 //console.log(Person2);
 
-Object.create(Person2);
-
-//console.log(Object.getPrototypeOf(Person2));
+//****SETTING A PROTOTYPE */
+//There are various ways to setting prototype in JS. We are using two Methods
+//i. Object.create() ii. constructor
+const myObject = {
+    city: 'Islamabad',
+    greeting: function(){
+        console.log(`I am from ${this.city}`);
+    }
+}
