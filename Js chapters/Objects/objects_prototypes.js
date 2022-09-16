@@ -83,10 +83,12 @@ const myObject = {
 }
 
 
+const wrongObjett = myObject;
+const rightObject = Object.create(myObject);
 
-const asad = myObject;
 
-Object.getPrototypeOf(asad);
+
+console.log();
 
 
 
