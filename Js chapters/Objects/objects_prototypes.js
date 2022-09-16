@@ -108,7 +108,10 @@ function person_fun(name){
 }
 
 //Now we are going to set the PROTOTYPE of `person_fun`
+Object.assign(person_fun.prototype = PersonObject);
 
+//We then put the methods defined in personPrototype onto the Person function's prototype property using Object.assign.
+console.log(person_fun);
 
 
 
