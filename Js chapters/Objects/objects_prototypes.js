@@ -36,11 +36,11 @@ const Person0 = {
 //***Get Protottype of object/property */
 const myArray = ['a','s','a','d'];
 
-console.log(Object.getPrototypeOf(myArray));
-console.log(myArray.keys('asad'))
+//console.log(Object.getPrototypeOf(myArray));
+//console.log(myArray.keys('asad'))
 
 //console.log(Person.hasOwnProperty('greeting')) //Check if `Person` has `greeting` Property & return true or False
-console.log(Object.getPrototypeOf(Person0.city)); //Getting the Prototype properties of `city` property in Person Object
+//console.log(Object.getPrototypeOf(Person0.city)); //Getting the Prototype properties of `city` property in Person Object
 //console.log(Object.getPrototypeOf(Person.greeting)); //Getting the Prototype properties of `greeting` property in Person Object
 
 //console.log(Person.city.search('City'));
@@ -78,24 +78,18 @@ const Today = new Date();
 const myObject = {
     city: 'Islamabad',
     greeting: function(){
-        
-    }
-}
-
-
-
-
-//****Learning `isPrototypeOf` */
-const Person20 = {};
-
-//console.log(Person2);
-
-//****SETTING A PROTOTYPE */
-//There are various ways to setting prototype in JS. We are using two Methods
-//i. Object.create() ii. constructor
-const myObject = {
-    city: 'Islamabad',
-    greeting: function(){
         console.log(`I am from ${this.city}`);
     }
 }
+
+
+
+const asad = myObject;
+
+Object.getPrototypeOf(asad);
+
+
+
+//console.log(asad);
+//asad.greeting();
+
