@@ -83,18 +83,7 @@ const myObject = {
 }
 
 
-//const wrongObjett = myObject;
-//const wrong = myObject;
-
-
-
-const rightObject = Object.create(myObject);
 const right = Object.create(myObject);
-
-right.city = 'Karachi';
-
-
-//console.log(wrongObjett);
 console.log(right);
 
 
