@@ -115,6 +115,8 @@ Object.assign(person_fun.prototype = PersonObject);
 
 const Aasad = new person_fun('Asda');
 
+//`Aasad Object is constructed from person_fun. And greeting() is set as its PROTOTYPE`
+
 console.log(Aasad);
 
 
