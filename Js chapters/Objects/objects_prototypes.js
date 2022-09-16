@@ -84,17 +84,32 @@ const myObject = {
 
 
 const Person_Proto = Object.create(myObject);
-console.log(myObject);
+console.log(Person_Proto);
 
 //The above example create prototypes for `Person_Proto object (newly created object)`.
+//If you console it, it shows an empty object having two default prototypes `city` , `greeting`.
+//This is the first method of how we set a prototype for our created object
+
+
+//****Constructor Method */
+
+//In JS all functions have property named PROTOYPE. 
+//When we call a function as a constructor then this property is set as a PROTOYPE of newly constructed object.
+
+const PersonObject = {
+    greeting: function(){
+        console.log(`Hello I am ${this.name}`);
+    }
+}
+
+
+function person_fun(name){
+    this.name = name;
+}
+
+//Now we are going to set the PROTOTYPE of `person_fun`
 
 
 
 
-//console.log(Object.hasOwn(wrongObjett , 'city'));
-
-
-
-//console.log(asad);
-//asad.greeting();
 
