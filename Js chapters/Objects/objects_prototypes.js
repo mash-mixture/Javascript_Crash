@@ -83,8 +83,10 @@ const myObject = {
 }
 
 
-const right = Object.create(myObject);
-console.log(right);
+const Person_Proto = Object.create(myObject);
+console.log(myObject);
+
+//The above example create prototypes for `Person_Proto object (newly created object)`.
 
 
 
