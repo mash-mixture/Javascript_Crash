@@ -36,7 +36,7 @@ class Book{
 //In the code below the Book1 is the instance of the Book Class.
 //The process of creating an instance is performed by a special function called a constructor. 
 //We pass values to the constructor for any internal state that we want to initialize in the new instance.
-//Each instance has its own internal state.
+//Each instance has its own internal state. Which we define at the time of initialize
 
 
 const Book1 = new Book('OOP Crash' , 'Asad' , 'September - 17 - 2022');
