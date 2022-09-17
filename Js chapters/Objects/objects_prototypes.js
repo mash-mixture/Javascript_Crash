@@ -131,6 +131,18 @@ Aasad.greeting();
 //ii. Usually Methods are define inside a Prototype. i.e In above code `greeting()` method.
 //Methods are visible inside object prototype
 
+/*It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. 
+That's because methods are usually the same for every object we create, 
+while we often want each object to have its own value for its data properties 
+(just as here where every person has a different name).*/
+
+//hasOwn return True if the property is defined inside a constructor
+
+//console.log(Object.hasOwn(Aasad , 'name'));
+
+//Here if I check the greeting method then it return false because it is defined inside a Prototype
+//console.log(Object.hasOwn(Aasad , 'greeting'));
+
 
 
 
