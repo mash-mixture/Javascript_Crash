@@ -86,7 +86,7 @@ const myObject = {
 const Person_Proto = Object.create(myObject);
 //console.log(Person_Proto);
 
-//The above example create prototypes for `Person_Proto object (newly created object)`.
+//The above example create prototypes for `Person_Proto object (which is newly created object)`.
 //If you console it, it shows an empty object having two default prototypes `city` , `greeting`.
 //This is the first method of how we set a prototype for our created object
 
@@ -113,11 +113,12 @@ Object.assign(person_fun.prototype = PersonObject);
 //We then put the methods defined in personPrototype onto the Person function's prototype property using Object.assign.
 //Now call the function as a constructor
 
-const Aasad = new person_fun('Asda');
+const Aasad = new person_fun('Asdaaa');
 
 //`Aasad Object is constructed from person_fun. And greeting() is set as its PROTOTYPE`
 
 console.log(Aasad);
+Aasad.greeting();
 
 
 
