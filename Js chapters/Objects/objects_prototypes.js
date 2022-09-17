@@ -117,8 +117,13 @@ const Aasad = new person_fun('Asdaaa');
 
 //`Aasad Object is constructed from person_fun. And greeting() is set as its PROTOTYPE`
 
+//Every new Constructed object from `person_fun` constructor used its prototypes
+
+//Below `Aasad` is new Constructed object from `person_fun` constructor. So that is why it used `person_fun` constructor PROTOTYPES i.e greeting().
+
 console.log(Aasad);
 Aasad.greeting();
+
 
 
 
