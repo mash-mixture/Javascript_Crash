@@ -125,6 +125,13 @@ console.log(Aasad);
 Aasad.greeting();
 
 
+//*** HAS OWN PROPERTY */
+//i.  Usually Properties are define inside a constructor. i.e In above code `name` property.
+//So properties define inside a constructor is directly visible in OBJECT.
+//ii. Usually Methods are define inside a Prototype. i.e In above code `greeting()` method.
+//Methods are visible inside object prototype
+
+
 
 
 
