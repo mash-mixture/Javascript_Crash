@@ -34,10 +34,15 @@ class Book{
 //**INSTANCE
 //The new Object created from the class is called the instance of this class.
 //In the code below the Book1 is the instance of the Book Class.
+//We can create as many instance of class as we need. So it help us to reduce the code repeatition
 //The process of creating an instance is performed by a special function called a constructor. 
 //We pass values to the constructor for any internal state that we want to initialize in the new instance.
 //Each instance has its own internal state. Which we define at the time of initialize
 //BOOK1 Instance has its own three properties values whichwe pass to the constructor
+
+//NOTE: Generally, the constructor is written out as part of the class definition, and it usually has the same name as the class itself:
+
+//We use a `new` Keyword to call the constructor of the class
 
 
 const Book1 = new Book('OOP Crash' , 'Asad' , 'September - 17 - 2022');
