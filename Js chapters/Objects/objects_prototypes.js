@@ -110,6 +110,9 @@ function person_fun(name){
 //Now we are going to set the PROTOTYPE of `person_fun`
 Object.assign(person_fun.prototype = PersonObject);
 
+//2nd Method which we define above
+//person_fun.prototype = Object.create(PersonObject);
+
 //We then put the methods defined in personPrototype onto the Person function's prototype property using Object.assign.
 //Now call the function as a constructor
 
