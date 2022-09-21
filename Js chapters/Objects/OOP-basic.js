@@ -58,10 +58,11 @@ So we define a general class for all kind of books.
 */
 
 class Books{
-    constructor(title , author , publishDate){
+    constructor(title , author , publishDate , fromat){
         this.title = title;
         this.author = author;
         this.publishDate = publishDate;
+        this.fromat = 'PDF'
     }
 
     bookMeta(){
@@ -114,4 +115,10 @@ const Books1 = new Books('')
 /*
 Keep an object internal state private and generally making a clear difference between its public interface and its internal 
 private state is called encapsulation
+*/
+
+//Example 
+/*
+Above we have a book object, and if we allow a book to download if it has PDF fromat. We could implement this by exposing 
+book format property and other code exmine that to decide whether the book is downloadable or not.
 */
