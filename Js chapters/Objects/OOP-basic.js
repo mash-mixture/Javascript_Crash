@@ -105,3 +105,12 @@ console.log(Object.hasOwn(Novels1 , 'title'));
 Novels1.bookMeta();
 
 const Books1 = new Books('')
+
+//***polymorphism*/
+//BookMeta() Method is used in different ways in each class this process is called encapsulation
+
+//***ENCAPSULATION */
+
+/*
+
+*/
