@@ -71,7 +71,8 @@ class Books{
 
 //We define other classes for novels , curriculum and historic books. Because all have different purposes, like curriculum books
 //used for yearly students & novels is for general readings
-//Novels class is derived from Books class
+//Novels class is derived from Books class, it is called sub-class of Books
+//Conversly Book is parent class of novels
 //Novels class inherits all the properties from from books class but we can add extra properties in it and use them in a differnt way 
 
 
