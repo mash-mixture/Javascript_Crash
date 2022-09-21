@@ -62,7 +62,7 @@ class Books{
         this.title = title;
         this.author = author;
         this.publishDate = publishDate;
-        this.fromat = 'PDF'
+        this.fromat = fromat;
     }
 
     bookMeta(){
@@ -122,3 +122,14 @@ private state is called encapsulation
 Above we have a book object, and if we allow a book to download if it has PDF fromat. We could implement this by exposing 
 book format property and other code exmine that to decide whether the book is downloadable or not.
 */
+
+const bookEncap = new Books('Js Crash' , 'Muhammad ALI' , '21-september-2022' , 'PDF');
+
+bookEncap.bookMeta();
+
+if(bookEncap.fromat == 'PDF'){
+    console.log('Its is available to download');
+}
+
+//This is not effecient way to write different code for whole program. So, we create a method `hasDownloadable` in Books object which insure that 
+//weather book is downloadable or not. So in this way we implements the logic in one place: which reduce overall code length
