@@ -112,5 +112,6 @@ const Books1 = new Books('')
 //***ENCAPSULATION */
 
 /*
-
+Keep an object internal state private and generally making a clear difference between its public interface and its internal 
+private state is called encapsulation
 */
