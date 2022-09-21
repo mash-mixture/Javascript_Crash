@@ -102,3 +102,5 @@ console.log(Novels1);
 console.log(Object.hasOwn(Novels1 , 'title'));
 
 Novels1.bookMeta();
+
+const Books1 = new Books('')
