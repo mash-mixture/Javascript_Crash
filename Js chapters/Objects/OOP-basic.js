@@ -134,7 +134,7 @@ if(bookEncap.fromat == 'PDF'){
 //This is not effecient way to write different code for whole program. So, we create a method `hasDownloadable` in Books object which insure that 
 //weather book is downloadable or not. So in this way we implements the logic in one place: which reduce overall code length
 
-Books.hasdownloadable = function(){
+bookEncap.hasdownloadable = function(){
     if(this.fromat == 'PDF'){
         console.log('Its is available to download');
     }
@@ -142,3 +142,5 @@ Books.hasdownloadable = function(){
         console.log('Its is unavailable to download');
     }
 }
+
+console.log(bookEncap);
