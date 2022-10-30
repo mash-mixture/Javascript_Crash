@@ -92,6 +92,10 @@ class Novels extends Books{
     bookMeta(){
         console.log(`The Novel "${this.title}" is written by "${this.author}" in ${this.publishDate}. It is ${this.genres} Novel. Is For ${this.forUsers}`);
     }
+
+    bookPrice(){
+        this.price = 500;
+    }
 }
 
 
