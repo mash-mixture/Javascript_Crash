@@ -16,4 +16,4 @@ myarray.forEach((item) => {
     if(item.find(element => element == '80') != undefined){
         console.log(myarray.indexOf(item));
     }
-})
+});
