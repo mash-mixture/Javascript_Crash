@@ -58,10 +58,11 @@ So we define a general class for all kind of books.
 */
 
 class Books{
-    constructor(title , author , publishDate){
+    constructor(title , author , publishDate , fromat){
         this.title = title;
         this.author = author;
         this.publishDate = publishDate;
+        this.fromat = fromat;
     }
 
     bookMeta(){
@@ -91,6 +92,10 @@ class Novels extends Books{
     bookMeta(){
         console.log(`The Novel "${this.title}" is written by "${this.author}" in ${this.publishDate}. It is ${this.genres} Novel. Is For ${this.forUsers}`);
     }
+
+    bookPrice(){
+        this.price = 500;
+    }
 }
 
 
@@ -103,3 +108,43 @@ console.log(Novels1);
 console.log(Object.hasOwn(Novels1 , 'title'));
 
 Novels1.bookMeta();
+
+const Books1 = new Books('')
+
+//***polymorphism*/
+//BookMeta() Method is used in different ways in each class this process is called polymorphism
+
+//***ENCAPSULATION */
+
+/*
+Keep an object internal state private and generally making a clear difference between its public interface and its internal 
+private state is called encapsulation
+*/
+
+//Example 
+/*
+Above we have a book object, and if we allow a book to download if it has PDF fromat. We could implement this by exposing 
+book format property and other code exmine that to decide whether the book is downloadable or not.
+*/
+
+const bookEncap = new Books('Js Crash' , 'Muhammad ALI' , '21-september-2022' , 'PDF');
+
+bookEncap.bookMeta();
+
+if(bookEncap.fromat == 'PDF'){
+    console.log('Its is available to download');
+}
+
+//This is not effecient way to write different code for whole program. So, we create a method `hasDownloadable` in Books object which insure that 
+//weather book is downloadable or not. So in this way we implements the logic in one place: which reduce overall code length
+
+bookEncap.hasdownloadable = function(){
+    if(this.fromat == 'PDF'){
+        console.log('Its is available to download');
+    }
+    else{
+        console.log('Its is unavailable to download');
+    }
+}
+
+console.log(bookEncap);
