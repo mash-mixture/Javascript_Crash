@@ -27,9 +27,21 @@ function local(){
 
 
 //Testing..
-console.log(`Global Variable: ${variable1}`);
+//console.log(`Global Variable: ${variable1}`);
 
-console.log(`Variable declare inside a block is also Global Variable: ${varaibale2}`);
+//console.log(`Variable declare inside a block is also Global Variable: ${varaibale2}`);
 
-console.log(`Accessing Local Variable: ${variable3}`); //It thows a reference error `variable3 is not defined`
+//console.log(`Accessing Local Variable: ${variable3}`); //It thows a reference error `variable3 is not defined`
 
+/**
+ * @Declear varaibale with @let keyword
+ * Using @let It @Declear a local scope variable (It will be access only inside the in which it is declared).
+ * You cannot re-declare a variable which is already declared with @let @keyword 
+ * 
+ */
+
+
+let useLet = 'I am declare with let';
+
+//Redeclaring
+//var useLet = 99.7; //It thows error: Uncaught SyntaxError: Identifier 'useLet' has already been declared
