@@ -68,6 +68,15 @@ class Books{
     bookMeta(){
         console.log(`${this.title} is written by ${this.author} in ${this.publishDate}`);
     }
+
+    get des(){
+        return `The book '${this.title}' is available in PDF format for Free`;
+    }
+
+    get read(){
+        return `Reading books is amazing`
+    }
+
 }
 
 //We define other classes for novels , curriculum and historic books. Because all have different purposes, like curriculum books
@@ -78,9 +87,11 @@ class Books{
 
 
 class Novels extends Books{
-    constructor(title , author , publishDate, forUsers , type , genres){
+    #private;
+    constructor(title = 'Default' , author = 'Default' , publishDate = new Date(), forUsers = 'Default' , type = 'Default', genres = 'Default'){
         
     super(title, author , publishDate)
+    //super.des
         this.title = title;
         this.author = author;
         this.publishDate = publishDate;
@@ -89,12 +100,15 @@ class Novels extends Books{
         this.genres = genres;
     }
 
-    bookMeta(){
-        console.log(`The Novel "${this.title}" is written by "${this.author}" in ${this.publishDate}. It is ${this.genres} Novel. Is For ${this.forUsers}`);
-    }
+    // bookMeta(){
+    //     console.log(`The Novel "${this.title}" is written by "${this.author}" in ${this.publishDate}. It is ${this.genres} Novel. Is For ${this.forUsers}`);
+    // }
 
     bookPrice(){
+        this.#private = 1234;
         this.price = 500;
+
+        return `The Price for User '${this.#private}' is ${this.price}PKR`;
     }
 }
 
@@ -104,6 +118,7 @@ class Novels extends Books{
 const Novels1 = new Novels('Tarzan  ki  Tabahi' , 'Ali Sethi' , '18-Seprember-2022' ,'Childrens' , 'Complete' , 'Fanntasy');
 
 console.log(Novels1);
+//Novels1.#private;
 
 console.log(Object.hasOwn(Novels1 , 'title'));
 
@@ -148,3 +163,17 @@ bookEncap.hasdownloadable = function(){
 }
 
 console.log(bookEncap);
+
+
+class child extends Books {
+    author = '131'
+    // constructor(title , author){
+    //     super(author)
+    //     this.title = title
+    //     this.author = author
+    // }
+
+    hasType(){
+        return true;
+    }
+}
