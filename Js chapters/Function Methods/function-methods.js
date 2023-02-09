@@ -145,3 +145,36 @@ xyz();
 
 xyz.call(secondObject);
 //Expected Output: Hye I am Any. Because we already define the gender variable in the `secondObject` object.
+
+/**
+ * With call(), you can assign an arbitrary value as this when calling an existing function, 
+ * without first attaching the function to the object as a property. 
+ * This allows you to use methods of one object as generic utility functions.
+ * 
+ * Utility Functions: The function or method of an object which we can reuse without creating
+ * the instance of the object.
+ */
+
+// Explaination:
+const anyObject = {
+    kind: 'Human',
+    talk(name) {
+        return `Hye I am ${name} & I am Talking to you.`
+    }
+}
+function existedFunction(name) {
+    if (this.kind === 'Human')
+        return console.log(this.talk(name)); //Here using outer object `talk()` method inside my function is used as a utility function
+    else
+        return console.log(`Hye I am ${name}`)
+}
+
+// calling function in global context
+existedFunction('Asad')
+
+// If we want to use `talk` method inside our existedFunction then we can use call method for that.
+existedFunction.call(anyObject, 'New asad'); //binding anyObject to the existedFunction.
+
+
+
+
