@@ -46,7 +46,7 @@ handler();
 /**BIND Method */
 /*defination:
 Bind method creates a new function and set its `this` keyword to the provided value.
-
+Bind return a new function which you can call.
 
 
 */
@@ -110,3 +110,38 @@ newFunction2('Second Level Binding');
 
 
 /* Call Method */
+/**
+ * Defination: The call method calls a function with provided `this` and arguments provided individually.
+ * Syntax: 
+ * function.call(thisArg)
+ * function.call(thisArg , arg)
+ * function.call(thisArg , arg1 , arg2 , ... argN)
+ * 
+ * Syntax Explaination:
+ * Parameters:
+ * thisArg: The value to use as `this` when calling a function.
+ * arg1,...argN: Arguments for the function.
+ * Return Value: The Result of calling function with the specific this keyword.
+ * Difference between call and apply.
+ * Call method is almost same like apply method. The only difference is that the call method takes second agrument as a list individual.
+ * Apply method takes the second argument in the form of array.
+ */
+
+/* Creating a function */
+function xyz() {
+    return console.log(`Hye I am ${this.gender}`);
+}
+
+xyz();
+//Expected Output: Hye I am Default. Because we already define the gender variable on global window object.
+/**
+ * Normally when calling a function the value of `this` inside the function is the object that the function was accessed on.
+ * In above Example we accessed/call the function on global window object. So the value of `this` inside the function is window object.
+ * 
+ * If we call the function with `call` method with an orbitrary `this` then the value of `this` inside the function is the object which
+ * we attach to the function.
+ * In the Example below we attach the `secondObject` object to the xyz() function. 
+ */
+
+xyz.call(secondObject);
+//Expected Output: Hye I am Any. Because we already define the gender variable in the `secondObject` object.
