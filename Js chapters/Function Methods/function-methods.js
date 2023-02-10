@@ -175,6 +175,20 @@ existedFunction('Asad')
 // If we want to use `talk` method inside our existedFunction then we can use call method for that.
 existedFunction.call(anyObject, 'New asad'); //binding anyObject to the existedFunction.
 
+// Example:
+// Here we are using the array method `forEach` as a utility function for our string.
+
+const str = 'I am a String';
+
+//By Default `string` has no forEach method. So we use array forEach method for string
+// using call method.
+
+// Getting Array forEach method.
+let FOREACH = Array.prototype.forEach;
+
+// call FOREACH function using call method.
+//FOREACH.call(thisArg , functionArg)
+FOREACH.call(str, (item => console.log(item)));
 
 
 

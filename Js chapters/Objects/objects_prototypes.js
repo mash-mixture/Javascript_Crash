@@ -1,14 +1,14 @@
 
 //**** Prototype Basics */
-// #Prototye is a mechanism by which Javascript objects inherit features from one another.
+//Prototype is a mechanism by which Javascript objects inherit features from one another.
 //Every object in JavaScript has a built-in property, which is called its prototype. 
-//#The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain.
-//#The chain ends when we reach a prototype that has null for its own prototype.
+//The prototype is itself an object, so the prototype will have its own prototype, making what's called a prototype chain.
+//The chain ends when we reach a prototype that has null for its own prototype.
 
 //***Making an object literal */
 const Person0 = {
     city: 'Karachi (City Of Light)',
-    greeting: function(){
+    greeting: function () {
         console.log(`Hello I am From ${this.city}`);
     }
 }
@@ -34,7 +34,7 @@ const Person0 = {
 
 
 //***Get Protottype of object/property */
-const myArray = ['a','s','a','d'];
+const myArray = ['a', 's', 'a', 'd'];
 
 //console.log(Object.getPrototypeOf(myArray));
 //console.log(myArray.keys('asad'))
@@ -77,7 +77,7 @@ const Today = new Date();
 
 const myObject = {
     city: 'Islamabad',
-    greeting: function(){
+    greeting: function () {
         console.log(`I am from ${this.city}`);
     }
 }
@@ -97,13 +97,13 @@ const Person_Proto = Object.create(myObject);
 //When we call a function as a constructor then this property is set as a PROTOYPE of newly constructed object.
 
 const PersonObject = {
-    greeting: function(){
+    greeting: function () {
         console.log(`Hello I am ${this.name}`);
     }
 }
 
 
-function person_fun(name){
+function person_fun(name) {
     this.name = name;
 }
 
@@ -134,9 +134,9 @@ Aasad.greeting();
 //ii. Usually Methods are define inside a Prototype. i.e In above code `greeting()` method.
 //Methods are visible inside object prototype
 
-/*It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor. 
-That's because methods are usually the same for every object we create, 
-while we often want each object to have its own value for its data properties 
+/*It's common to see this pattern, in which methods are defined on the prototype, but data properties are defined in the constructor.
+That's because methods are usually the same for every object we create,
+while we often want each object to have its own value for its data properties
 (just as here where every person has a different name).*/
 
 //hasOwn return True if the property is defined inside a constructor

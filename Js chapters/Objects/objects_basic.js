@@ -2,19 +2,19 @@
 
 //*****Creating Simple js object******//
 const Person = {
-    name:       'Asad',
-    age:        '22',
-    education:  'BSC(Computer Science)',    //These are the Properties of Object
+    name: 'Asad',
+    age: '22',
+    education: 'BSC(Computer Science)',    //These are the Properties of Object
     desginaion: 'Web Developer',
-    company:    'Nexstair',
+    company: 'Nexstair',
     experience: '1.5 Years',
-    Nationality:'Pakistani',
-    
-    intro:      function(){ //This is method of Object
+    Nationality: 'Pakistani',
+
+    intro: function () { //This is method of Object
         console.log(`Hello, I am ${this.name} & I am ${this.age} Year old. I am a ${this.Nationality} & I done ${this.education} in Past Year`);
     },
 
-    status:     function(){
+    status: function () {
         console.log(`I am a ${this.desginaion} in ${this.company} having ${this.experience} Experience.`);
     }
 };
@@ -36,26 +36,26 @@ Person.experience = '5 Months';
 
 //******Using Simple Constructor To Enhanced the Code*****//
 
-function createPerson(name , age){
+function createPerson(name, age) {
     this.name = name;
     this.age = age;
-    
-    this.intro = function(){
+
+    this.intro = function () {
         console.log(`I am a ${this.name} & I am ${this.age} year old`);
     }
 }
 
-//***Call this function as a constructor we use `new` keyword
+//**Call this function as a constructor we use `new` keyword
 
-const Person1 = new createPerson('Asad' , 22);
-//Person1.intro();
+const Person1 = new createPerson('Asad', 22);
+Person1.intro();
 
 //***Now we can update its properties/attribute and Methods/Function
 Person1.Nationality = 'Pakistani';
 
 
 //you can use the properties of constructor in newly created method for that constructor
-Person1.status = function(){
+Person1.status = function () {
     console.log(`Hye I am ${this.Nationality} and I am available...`);
 }
 
@@ -63,7 +63,7 @@ Person1.status = function(){
 Person1.status();
 
 //Creating new instance of constructor `createPerson`. 
-const Person2 = new createPerson('Ali' , 22);
+const Person2 = new createPerson('Ali', 22);
 
 Person2.intro();
 
