@@ -1,3 +1,5 @@
+/***************************    W O R K   I N   P R O G R E S S    ***************************/
+
 //****Asynchronous Js***/
 //Javascript is an single thread language. The code written in javascript is executed line by line.
 //If there is an error in the mid of code then the code below this error will not be executed due to its single thread behavour.
@@ -5,7 +7,7 @@
 //result will return to Javascript main thread.
 
 /*Example*/
- async function otherTests(){
+async function otherTests() {
     console.log('Outer Test 1')
     console.log('Outer Test 2')
     await verify();
@@ -26,9 +28,9 @@ console.warn('Unknown Error: Process Terminated');
 console.log(Passed);
 console.log('Not Executed');
 
-function verify(){
+function verify() {
     console.log(Verifying);
-    setTimeout(()=>{
+    setTimeout(() => {
         console.log('Data verified')
-    },5000)
+    }, 5000)
 }

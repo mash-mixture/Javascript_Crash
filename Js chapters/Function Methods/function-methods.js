@@ -1,4 +1,5 @@
-console.log(`Function Methods`)
+/***************************   C O M P L E T E    G U I D E   ***************************/
+
 // Creating a function.
 // Example-1:
 function getName(first, last) {

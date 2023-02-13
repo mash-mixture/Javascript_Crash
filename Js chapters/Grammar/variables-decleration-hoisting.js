@@ -1,3 +1,5 @@
+/***************************    W O R K   I N   P R O G R E S S    ***************************/
+
 /****Variable Decleration***/
 /*
 There are three types to declare a javascript variable.
@@ -8,20 +10,20 @@ There are three types to declare a javascript variable.
 
 
 /** 
- * @Declear varaibale with @var keyword
- * Using @var It @Declear a global scope variable.
- * IF we @declare it inside a @function then it will be local to that @function in which it is @declared.
+ * Declear varaibale with var keyword
+ * Using var It Declear a global scope variable.
+ * IF we declare it inside a function then it will be local to that function in which it is @declared.
 */
 
-/**EXAMPLE */
+
 
 var variable1 = 30; //This is global variable
 
-if(true){
+if (true) {
     var varaibale2 = 99; //As it declared inside a block but it is also global and can access outside the block
 }
 
-function local(){
+function local() {
     var variable3 = 210; //This varibale is local to function and only accessed inside this function.
 }
 
@@ -34,9 +36,9 @@ function local(){
 //console.log(`Accessing Local Variable: ${variable3}`); //It thows a reference error `variable3 is not defined`
 
 /**
- * @Declear varaibale with @let keyword
- * Using @let It @Declear a local scope variable (It will be access only inside the in which it is declared).
- * You cannot re-declare a variable which is already declared with @let @keyword 
+ * Declear varaibale with let keyword
+ * Using @let It Declear a local scope variable (It will be access only inside the in which it is declared).
+ * You cannot re-declare a variable which is already declared with let keyword 
  * 
  */
 

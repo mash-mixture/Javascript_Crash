@@ -1,3 +1,4 @@
+/***************************    W O R K   I N   P R O G R E S S    ***************************/
 
 //**** Prototype Basics */
 //Prototype is a mechanism by which Javascript objects inherit features from one another.
